@@ -16,7 +16,7 @@ Including an example of how to use your role (for instance, with variables passe
 ```yaml
     - hosts: all
       roles:
-         - { role: start_containers, lxc_start_ids: [ 101, 102, 103 ] }
+         - { role: tychobrouwer.lxc_start, lxc_start_ids: [ 101, 102, 103 ] }
 ```
 
 License
