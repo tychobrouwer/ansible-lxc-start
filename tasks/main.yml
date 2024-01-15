@@ -1,7 +1,7 @@
 ---
 # tasks file for start_containers
 - name: Start containers
-  ansible.builtin.command: "pct start {{ item }}"
+  ansible.builtin.command: pct start {{ item }}
   register: container_start_result
   changed_when: "'already running' not in container_start_result.stdout"
   with_items: "{{ role_container_ids }}"
