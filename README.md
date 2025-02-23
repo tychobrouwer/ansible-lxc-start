@@ -14,9 +14,15 @@ Example Playbook
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
 ```yaml
-    - hosts: all
-      roles:
-         - { role: tychobrouwer.lxc_start, lxc_start_ids: [ 101, 102, 103 ] }
+- hosts: all
+  vars:
+    lxc_start_ids:
+      - 100
+      - 101
+      - 102
+
+  roles:
+    - role: tychobrouwer.lxc_start
 ```
 
 License
